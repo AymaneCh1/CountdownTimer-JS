@@ -32,4 +32,4 @@ body {
   font-size: 60px;
 }
 
-.container-day { display: none; }
+.container-day { display: block; }

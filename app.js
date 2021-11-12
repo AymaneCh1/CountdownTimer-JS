@@ -1,5 +1,5 @@
 const countdown = () => {
-  const countDate = new Date('November 13, 2021 00:00:00').getTime();
+  const countDate = new Date('November 14, 2021 23:35:00').getTime();
   const now = new Date().getTime();
   const gap = countDate - now;
 
@@ -13,10 +13,33 @@ const countdown = () => {
   const textMinute = Math.floor((gap % hour) / minute );
   const textSecond = Math.floor((gap % minute) / second );
 
-  document.querySelector('.day').innerText = textDay;
-  document.querySelector('.hour').innerText = textHour;
-  document.querySelector('.minute').innerText = textMinute;
-  document.querySelector('.second').innerText = textSecond;
+  const dayText = document.querySelector('.day');
+  const hourText = document.querySelector('.hour');
+  const minuteText = document.querySelector('.minute');
+  const secText = document.querySelector('.second');
+
+  const mainBx = document.querySelector('.coming-soon');
+
+  dayText.innerText = textDay;
+  hourText.innerText = textHour;
+  minuteText.innerText = textMinute;
+  secText.innerText = textSecond;
+
+  const timeBx = document.querySelectorAll(".container-time");
+
+  console.log(gap);
+
+  
+
+  if(gap < 86492042) {
+    hourText.style.color = "red";
+    timeBx.forEach(e => e.style.color = "red");
+  }
+
+  if (gap < 86428433) { mainBx.style.display = "none"; }
+
+  if( dayText === 0 ) {  }
+
 }
 
 setInterval(countdown, 1000);
