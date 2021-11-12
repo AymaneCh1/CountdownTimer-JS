@@ -12,6 +12,8 @@ const countdown = () => {
   const textHour = Math.floor((gap % day) / hour );
   const textMinute = Math.floor((gap % hour) / minute );
   const textSecond = Math.floor((gap % minute) / second );
+  
+  const box = document.querySelector('.coming-soon');
 
   document.querySelector('.day').innerText = textDay;
   document.querySelector('.hour').innerText = textHour;
