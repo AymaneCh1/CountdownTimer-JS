@@ -17,6 +17,10 @@ const countdown = () => {
   document.querySelector('.hour').innerText = textHour;
   document.querySelector('.minute').innerText = textMinute;
   document.querySelector('.second').innerText = textSecond;
+  
+  if(gap < 10000) {
+  	box.style.display = "none";
+  }
 }
 
 setInterval(countdown, 1000);
